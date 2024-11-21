@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamGenerateCV.MainPage">
+
+    <ScrollView Padding="20">
+        <StackLayout>
+
+            <!-- Título y subtítulo -->
+            <Label Text="Xamarin - Generate CV"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="CV-Dinámico"
+                   FontSize="18"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource ElegantGray}"
+                   Margin="0,5,0,20" />
+
+            <!-- Foto de perfil -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image x:Name="imageProfile"
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       Aspect="AspectFill"
+                       BackgroundColor="{StaticResource LightLavender}"
+                       Margin="0,0,10,0"/>
+                <Button Text="Seleccionar Foto"
+                        BackgroundColor="{StaticResource SoftPink}"
+                        TextColor="White"
+                        FontSize="18"
+                        HeightRequest="50"
+                        CornerRadius="10"
+                        Margin="0,0,0,20"
+                        Clicked="OnSelectImageButtonClicked" />
+            </StackLayout>
+
+            <!-- Campos para los datos -->
+            <Label Text="Nombre completo: " FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="nameEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Cargo profesional:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="positionEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Teléfono:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="phoneEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Correo electrónico:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="emailEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="País:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="countryEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="LinkedIn:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="linkedinEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Idiomas:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="languageEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Habilidades:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Entry x:Name="skillsEntry" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Perfil profesional:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Editor x:Name="profileEntry" HeightRequest="100" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Experiencia laboral:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Editor x:Name="experienceEntry" HeightRequest="100" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <Label Text="Formación académica:" FontSize="16" TextColor="{StaticResource ElegantGray}"/>
+            <Editor x:Name="educationEntry" HeightRequest="100" BackgroundColor="{StaticResource LightLavender}" TextColor="{StaticResource ElegantGray}" />
+
+            <!-- Botón para generar el CV -->
+            <Button Text="Generar CV"
+                    BackgroundColor="{StaticResource SoftPink}"
+                    TextColor="White"
+                    FontSize="18"
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"
+                    Clicked="OnCvPageButtonClicked" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

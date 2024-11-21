@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamGenerateCV.CvPage">
+
+    <ScrollView Padding="20">
+        <StackLayout>
+
+            <!-- Foto de perfil con fondo pastel -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource SoftPink}" Padding="20">
+                <Image x:Name="profileImage" 
+                       WidthRequest="100" 
+                       HeightRequest="100" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Start" 
+                       Source="placeholder.jpg" />
+                <StackLayout Padding="20, 5, 0, 0" VerticalOptions="Start">
+                    <Label x:Name="nameLabel" 
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Start" 
+                           TextColor="{StaticResource ElegantGray}"/>
+                    <Label x:Name="positionLabel" 
+                           FontSize="16" 
+                           HorizontalOptions="Start" 
+                           TextColor="{StaticResource ElegantGray}"/>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Información de contacto -->
+            <StackLayout BackgroundColor="{StaticResource LightLavender}" Padding="10">
+                <Label Text="CONTACTO" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource ElegantGray}"/>
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource ElegantGray}" Margin="0,5"/>
+                <Label x:Name="phoneLabel" FontSize="14" TextColor="{StaticResource ElegantGray}" />
+                <Label x:Name="emailLabel" FontSize="14" TextColor="{StaticResource ElegantGray}" />
+                <Label x:Name="countryLabel" FontSize="14" TextColor="{StaticResource ElegantGray}" />
+                <Label x:Name="linkedinLabel" FontSize="14" TextColor="{StaticResource ElegantGray}" />
+            </StackLayout>
+
+            <!-- Idiomas -->
+            <StackLayout BackgroundColor="{StaticResource LightLavender}" Padding="10">
+                <Label Text="IDIOMAS" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource ElegantGray}"/>
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource ElegantGray}" Margin="0,5"/>
+                <Label x:Name="languagesLabel" FontSize="14" TextColor="{StaticResource ElegantGray}" />
+            </StackLayout>
+
+            <!-- Aptitudes -->
+            <StackLayout BackgroundColor="{StaticResource LightLavender}" Padding="10">
+                <Label Text="APTITUDES" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource ElegantGray}"/>
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource ElegantGray}" Margin="0,5"/>
+                <Label x:Name="skillsLabel" FontSize="14" TextColor="{StaticResource ElegantGray}" />
+            </StackLayout>
+
+            <!-- Más secciones (Perfil, Experiencia, Educación) -->
+            <StackLayout BackgroundColor="{StaticResource MintGreen}" Padding="10">
+                <Label Text="PERFIL PROFESIONAL" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SoftPink}"/>
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource SoftPink}" Margin="0,5"/>
+                <Label x:Name="profileLabel" FontSize="14" TextColor="Black"/>
+
+                <Label Text="EXPERIENCIA LABORAL" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SoftPink}"/>
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource SoftPink}" Margin="0,5"/>
+                <Label x:Name="experienceLabel" FontSize="14" TextColor="Black"/>
+
+                <Label Text="FORMACIÓN" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SoftPink}"/>
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource SoftPink}" Margin="0,5"/>
+                <Label x:Name="educationLabel" FontSize="14" TextColor="Black"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
